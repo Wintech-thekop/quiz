@@ -122,7 +122,7 @@ class _QuizScreenState extends State<QuizScreen> {
       width: MediaQuery.of(context).size.width * 0.5,
       height: 48,
       child: ElevatedButton(
-        child: Text(isLastQuestion ? "Submit" : "Next"),
+        child: Text(isLastQuestion ? "ส่งข้อสอบ" : "ข้อต่อไป"),
         style: ElevatedButton.styleFrom(
           shape: const StadiumBorder(),
           primary: Colors.blueAccent,
@@ -162,7 +162,7 @@ class _QuizScreenState extends State<QuizScreen> {
             TextStyle(color: isPassed ? Colors.greenAccent : Colors.redAccent),
       ),
       content: ElevatedButton(
-        child: const Text('เริ่มสอบใหม่'),
+        child: Text(isPassed ? "เล่นโทรศัพท์ได้" : "เริ่มสอบใหม่"),
         onPressed: () {
           Navigator.pop(context);
           setState(() {
